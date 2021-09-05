@@ -5,13 +5,13 @@ import requests
 def http_head(url):
     resp = requests.head(url)
     # return url, resp.status_code
-    print(url, resp.status_code)
+    print(threading.current_thread().getName(), url, resp.status_code)
 
 
 def http_head_m(url, name):
     resp = requests.head(url)
     # return url, resp.status_code
-    print(name, url, resp.status_code)
+    print(threading.current_thread().getName(), name, url, resp.status_code)
 
 
 if __name__ == "__main__":
